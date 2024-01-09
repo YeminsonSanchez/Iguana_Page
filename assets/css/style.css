@@ -1,79 +1,207 @@
-body {
-  font-family: "Raleway", Sans-serif;
-  padding: 0;
-  border: 0;
-  margin: 0;
-  background-color: black;
-  text-align: center;
-  color: white;
+:root {
+    --background-primary: #000000;
+    --background-secundary: #1e1a13;
+    --color-text: #ffffff;
 }
 
-.bg-header {
-  width: 1374px;
-  height: 849px;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Raleway", Sans-serif;
+    text-align: center;
+    color: var(--color-text);
+    font-size: 1rem;
+    background-color: var(--background-primary);
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 59px;
+    color: var(--color-text);
+}
+
+.container-image {
+    width: 100%;
+    height: 100vh;
+}
+
+.container-image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 30px;
+    }
+    .container-image {
+        width: 100%;
+        height: 50vh;
+    }
 }
 
 .desc-section {
-  font-size: 16px;
-  padding-top: 70px;
-  padding-bottom: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 350px;
 }
 
-.d1 {
-  display: inline-block;
-  vertical-align: middle;
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 475px;
 }
 
-.iguana-1 {
-  top: 845px;
-  left: 731px;
-  width: 399px;
-  height: 237px;
+.container-image-description {
+    width: 400px;
+}
+
+.container-image-description img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#icon-hand {
+    transform: scaleX(-1);
 }
 
 p {
-  margin-right: 150px;
-  top: 876px;
-  left: 150px;
-  width: 475px;
-  text-align: left;
-  font-size: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    color: var(--color-text);
 }
 
-.icons-section {
-  background-color: #1E1A13;
-  padding-bottom: 70px;
-  padding-top: 70px
+.icons-section  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--background-secundary);
+    width: 100%;
+    height: 350px;
 }
 
-.eventos {
-  margin-bottom: 70px;
-  margin-top: 70px;
-}
-
-.evento1 {
-  display: inline-block;
+.container-feature {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 h2 {
-  font-size: 40px;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--color-text);
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 h3 {
-  font-size: 25px;
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--color-text);
 }
 
-img {
-  width: 316px;
-  height: 202px;
-  margin-left: 20px;
-  display: inline-block;
-  vertical-align: middle;
+.container-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    gap: 1rem;
+}
+
+.container-gallery-image {
+    width: 316px;
+    height: 202px;
+    overflow: hidden;
+}
+
+.container-gallery-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 footer {
-  background-color: #1E1A13;
+    background-color: var(--background-secundary);
+    padding: 2rem 0;
 }
-a{
-  color: white;
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .desc-section {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 6rem 0;
+    }
+    .description {
+        width: 350px;
+    }
+
+    .container-image-description {
+        width: 350px;
+    }
+
+    .container-icons {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+
+    i {
+        font-size: 10px;
+    }
+
+    #icon-hand,
+    #icon-eye,
+    #icon-paint {
+        font-size: 30px;
+    }
+
+    .container-gallery {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 3rem 0;
+    }
+
+    .container-gallery-image {
+        width: 100%;
+    }
+
+    a {
+        font-size: 16px;
+    }
 }
